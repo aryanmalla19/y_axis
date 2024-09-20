@@ -15,15 +15,15 @@ function Work() {
   ];
   const buttonData = [
     {
-        btnText: "Sign Up Now",
-        color: "bg-red-500",
-        link: "https://example.com/learn-more"
+      btnText: "Sign Up Now",
+      color: "bg-red-500",
+      link: "https://example.com/learn-more"
     },
     {
-        btnText: "View Sample Career Strategy Report",
-        link: "https://example.com/get-started"
+      btnText: "View Sample Career Strategy Report",
+      link: "https://example.com/get-started"
     }
-];
+  ];
 
 
 
@@ -36,15 +36,16 @@ function Work() {
   );
 
   return (
-    <div className="container mx-auto">
+    <div className="container font-roboto mx-auto">
       {/* Work Form Section */}
-      <WorkForm /> 
+      <WorkForm />
 
       {/* Search Section */}
       <ThreeButtonSearch
         title="Work Opportunity"
         btnText="Find Salary"
-        color="bg-gray-400"
+        color="bg-gray-200"
+        colorText='text-black'
       />
 
       {/* Country Dividers */}
@@ -56,6 +57,7 @@ function Work() {
         desc="Select a preferred profession and discover the average salary range across various countries."
         btnText="Find Salary"
         color="bg-blue-500"
+        colorText='text-white'
       />
 
       {/* Two Container Sections */}
@@ -72,8 +74,10 @@ function Work() {
         title="Get Your Career Strategy"
         url="https://www.y-axis.ae/assets/cms/2023-08/Get%20your%20Career%20Strategy.webp"
         bulletPoints={jobData}
-    buttonData={buttonData}
+        buttonData={buttonData}
+        flex='flex-row-reverse'
       />
+      <TwoContainerWithPicture title='Build your suitable profile' bulletPoints={jobData} url='https://www.y-axis.ae/assets/cms/2023-08/Build%20your%20suitable%20profile.webp' buttonData={buttonData} />
     </div>
   );
 }

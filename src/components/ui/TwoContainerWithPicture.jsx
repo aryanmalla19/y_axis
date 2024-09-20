@@ -13,17 +13,17 @@ function TwoContainerWithPicture({ title, url, desc, data=[], colorText, bgColor
                 {/* Render bullet points only if available */}
                 
                 {bulletPoints && (
-                    <ul className="flex w-10/12 mx-auto flex-col">
+                    <ul className="flex list-disc w-9/12 mx-auto flex-col">
                         
                         {bulletPoints?.map((e, index) => (
-                            <li key={index}>{e.name}</li>
+                            <li className='list-disc' key={index}>{e.name}</li>
                         ))}
                     </ul>
                 )}
 
                 <ul className="flex flex-wrap w-10/12 mx-auto justify-between mt-2">
                     {data.map((item, index) => (
-                        <li key={index} className="px-5 mt-5 border border-white py-3">
+                        <li key={index} className="px-5 min-w-40 text-center mt-5 border border-white py-3">
                             {item.name}
                         </li>
                     ))}
